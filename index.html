@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费windows许可证授权中心</title>
+    <meta name="keywords" content="Windows许可证, 免费激活, 系统授权, Windows激活工具, 正版授权, 许可证密钥, 激活教程">
+    <meta name="description" content="免费Windows许可证授权中心提供Windows系统的正版授权信息、激活教程和相关服务，帮助用户合法使用Windows操作系统。">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* 全局链接样式 - 移除下划线 */
+        a {
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* 顶部横幅 */
+        .header-banner {
+            background-color: #0078d7;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .banner-title {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .windows-icon {
+            margin-right: 10px;
+            font-size: 2rem;
+            color: #fff;
+            vertical-align: middle;
+        }
+        
+        .login-btn {
+            background-color: white;
+            color: #0078d7;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .login-btn:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .login-icon {
+            margin-right: 5px;
+        }
+        
+        /* 公告中心 */
+        .announcement-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .announcement-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .announcement-section h2::before {
+            content: "📢";
+            margin-right: 8px;
+        }
+        
+        .announcement-scroll {
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .announcement-content {
+            position: absolute;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .announcement-item {
+            padding: 10px 15px;
+            font-size: 1rem;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* 产品展示区 */
+        .products-section {
+            margin: 30px 0;
+        }
+        
+        .products-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .products-section h2::before {
+            content: "📦";
+            margin-right: 8px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-category {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #0078d7;
+        }
+        
+        .category-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .versions-list {
+            list-style: none;
+            color: #64748b;
+        }
+        
+        .versions-list li {
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        /* 密钥选购区 */
+        .keys-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .keys-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .keys-section h2::before {
+            content: "🔑";
+            margin-right: 8px;
+        }
+        
+        .key-carousel {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f1f5f9;
+            border-radius: 4px;
+        }
+        
+        .key-items {
+            position: absolute;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .key-item {
+            padding: 15px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .key-item:last-child {
+            border-bottom: none;
+        }
+        
+        .key-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .key-code {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            padding: 10px;
+            background-color: #f8fafc;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .key-visible {
+            color: #333;
+        }
+        
+        .key-hidden {
+            color: #999;
+            letter-spacing: 2px;
+        }
+        
+        .buy-key {
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .buy-key:hover {
+            background-color: #005a9e;
+        }
+
+        /* 版本对比折叠模块样式 */
+        .version-comparison {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .collapsible-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .collapsible-header h2 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .collapsible-header h2::before {
+            content: "📋";
+            margin-right: 8px;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            margin-top: 15px;
+        }
+
+        /* 表格样式 */
+        .version-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .version-table th,
+        .version-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .version-table th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .version-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .version-table tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        /* 设备检测区 */
+        .device-info {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .device-info h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .device-info h2::before {
+            content: "💻";
+            margin-right: 8px;
+        }
+        
+        .refresh-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #f1f5f9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .refresh-btn:hover {
+            background-color: #0078d7;
+            color: white;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            background-color: #f8fafc;
+            padding: 12px;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .info-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        
+        .info-value {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        
+        .info-error {
+            color: #e74c3c;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+        
+        /* 功能按钮 */
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 100;
+        }
+        
+        .action-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #0078d7;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 120, 215, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            background-color: #005a9e;
+            transform: scale(1.05);
+        }
+
+        /* 微信二维码弹窗样式 */
+        .wechat-qrcode {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 99;
+            display: none;
+            text-align: center;
+        }
+        
+        .wechat-qrcode img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .wechat-qrcode p {
+            color: #333;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0 15px;
+            margin-top: 40px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: #bdc3c7;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.8rem;
+            padding-top: 15px;
+            border-top: 1px solid #34495e;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .banner-title {
+                font-size: 1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .key-code {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .version-table {
+                font-size: 0.9rem;
+            }
+            
+            .version-table th,
+            .version-table td {
+                padding: 8px 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .key-item {
+                padding: 10px;
+            }
+            
+            .action-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .action-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .wechat-qrcode {
+                bottom: 65px;
+                right: 15px;
+                padding: 10px;
+            }
+            
+            .wechat-qrcode img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部横幅 -->
+    <header class="header-banner">
+        <div class="container banner-content">
+            <div class="banner-title">
+                <span class="windows-icon"><i class="fa fa-windows"></i></span>
+                正版·授权许可证
+            </div>
+            <a href="https://signup.microsoft.com/" target="_blank">
+                <button class="login-btn">
+                    <span class="login-icon">👤</span>
+                    注册/登录
+                </button>
+            </a>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- 公告中心 -->
+        <section class="announcement-section">
+            <h2>公告中心</h2>
+            <div class="announcement-scroll">
+                <div class="announcement-content" id="announcementContent">
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知一：因密钥可复制，现仅远程协助
+                    </span></div>
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知二：一次性，买断版，一机一码，版本任选，终生可用，免费升级</span></div>
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知三：【限时福利】 最新Office办公套件，含激活、部署，仅需加价获取</span></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 产品展示区 -->
+        <section class="products-section">
+            <h2>可激活/部署的产品</h2>
+            <div class="products-grid">
+                <!-- Windows 产品类别 -->
+                <div class="product-category">
+                    <div class="category-icon">
+    <img src="pic/win.png" alt="Windows Logo" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
+                    <div class="category-name">Windows 操作系统</div>
+                    <ul class="versions-list">
+                        <li>任选·版本</li>
+                    </ul>
+                </div>
+                
+                <!-- Office 产品类别 -->
+                <div class="product-category">
+                    <div class="category-icon">
+    <img src="pic/office365.png" alt="Windows Logo" style="width: 100%; height: 100%; object-fit: contain;">
+</div>
+                    <div class="category-name">Microsoft Office</div>
+                    <ul class="versions-list">
+                        <li>任选·版本</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 密钥选购区 -->
+        <section class="keys-section">
+            <h2>密钥选购</h2>
+            <div class="key-carousel">
+                <div class="key-items" id="keyItems" style="will-change:transform;">
+                    <!-- 密钥内容将通过JS动态生成 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 版本差异对比折叠模块 -->
+        <section class="version-comparison">
+            <div class="collapsible-header">
+                <h2>Windows 版本差异对比</h2>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="collapsible-content">
+                <table class="version-table">
+                    <thead>
+                        <tr>
+                            <th>版本</th>
+                            <th>核心定位</th>
+                            <th>高级安全功能</th>
+                            <th>管理工具</th>
+                            <th>虚拟化支持</th>
+                            <th>长期服务</th>
+                            <th>授权方式</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>家庭版</td>
+                            <td>个人家庭用户</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>零售</td>
+                        </tr>
+                        <tr>
+                            <td>专业版</td>
+                            <td>中小企业/专业用户</td>
+                            <td>✅（基础）</td>
+                            <td>组策略</td>
+                            <td>Hyper-V</td>
+                            <td>❌</td>
+                            <td>零售/批量</td>
+                        </tr>
+                        <tr>
+                            <td>教育版</td>
+                            <td>学校/教育机构</td>
+                            <td>✅（增强）</td>
+                            <td>组策略+教育管理</td>
+                            <td>Hyper-V</td>
+                            <td>❌</td>
+                            <td>教育批量</td>
+                        </tr>
+                        <tr>
+                            <td>企业版</td>
+                            <td>大型企业/组织</td>
+                            <td>✅（完整）</td>
+                            <td>完整MDM工具</td>
+                            <td>Hyper-V+高级虚拟化</td>
+                            <td>✅（LTSC）</td>
+                            <td>企业批量</td>
+                        </tr>
+                        <tr>
+                            <td>专业工作站版</td>
+                            <td>高性能工作站用户</td>
+                            <td>✅（基础）</td>
+                            <td>组策略+工作站优化</td>
+                            <td>Hyper-V+内存优化</td>
+                            <td>❌</td>
+                            <td>零售/批量</td>
+                        </tr>
+                        <tr>
+                            <td>IoT企业版</td>
+                            <td>物联网设备</td>
+                            <td>✅（嵌入式安全）</td>
+                            <td>嵌入式设备管理</td>
+                            <td>有限支持</td>
+                            <td>✅（10年）</td>
+                            <td>嵌入式授权</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- 设备检测区 -->
+        <section class="device-info">
+            <h2>设备信息检测</h2>
+            <button class="refresh-btn" id="refreshInfo">↺</button>
+            <div class="info-grid" id="deviceInfoGrid">
+                <!-- 设备信息将通过JS动态生成 -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- 功能按钮 -->
+    <div class="action-buttons">
+        <button class="action-btn" id="toTop" title="回到顶部">⇧</button>
+        <button class="action-btn" id="toBottom" title="到底部">⇩</button>
+        <button class="action-btn" id="wechatBtn" title="微信联系">💬</button>
+        <!-- 微信二维码弹窗 -->
+        <div id="wechatQrCode" class="wechat-qrcode">
+            <img src="pic/wx-code.png" alt="微信二维码" />
+            <p>扫码-客户经理</p>
+        </div>
+    </div>
+    
+    <footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="https://sunlogin.oray.com/download?categ=personal" class="footer-link" target="_blank">向日葵远程</a>
+            <a href="https://www.rdviewer.com/" class="footer-link" target="_blank">Rdview远程</a>
+            <a href="https://msdn.itellyou.cn/" class="footer-link" target="_blank">系统下载</a>
+            <a href="https://www.kdocs.cn/l/cghFNwCAiYQf" class="footer-link" target="_blank">帮助文档</a>
+            <a href="https://www.huorong.cn/" class="footer-link" target="_blank">火绒</a>
+            <a href="https://iknow.lenovo.com.cn/detail/200014" class="footer-link" target="_blank">Bitlocker</a>
+            <a href="https://otp.landian.vip/zh-cn/" class="footer-link" target="_blank">Office工具</a>
+            <a href="https://www.wepe.com.cn/" class="footer-link" target="_blank">PE</a>
+            <a href="javascript:void(0);" class="footer-link" id="faqBtn">FAQ</a>
+        </div>
+        <div class="copyright">
+            ©   2018-至今 版权所有
+        </div>
+    </div>
+</footer>
+<!-- FAQ模态框 -->
+<div id="faqModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:400px;padding:30px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
+        <div style="font-size:1.2rem;font-weight:bold;margin-bottom:18px;">常见问题 FAQ</div>
+        <div style="text-align:left;font-size:1rem;line-height:1.8;">
+            <div>
+                <b>问：</b>是否，正版永久？<br><b>答：</b>是；账户绑定
+                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+            </div>
+            <div>
+                <b>问：</b>换电脑，是否能用<br><b>答：</b>是
+                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+            </div>
+            <div>
+                <b>问：</b>多台电脑，可用？<br><b>答：</b>可
+                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+            </div>
+            <div>
+                <b>问：</b>是否，有售后<br><b>答：</b>质保一年
+                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+            </div>
+            <div>
+                <b>问：</b>如何查看，正版激活？<br><b>答：</b>设置→系统→激活→激活状态
+                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+            </div>
+            <img src="pic/win-sq.png" alt="激活状态" style="max-width:100%;width:220px;margin:10px auto;display:block;border-radius:6px;">
+        </div>
+        <button id="faqClose" style="margin-top:18px;padding:6px 24px;border:none;background:#0078d7;color:#fff;border-radius:4px;font-size:1rem;cursor:pointer;">关闭</button>
+    </div>
+</div>
+    </footer>
+
+    <script>
+        // 公告滚动功能
+        let announcementIndex = 0;
+        const announcementContent = document.getElementById('announcementContent');
+        const announcementItems = announcementContent.querySelectorAll('.announcement-item');
+        // 自动获取高度，避免硬编码
+        const announcementHeight = announcementItems[0]?.offsetHeight || 60;
+        
+        function scrollAnnouncement() {
+            announcementIndex = (announcementIndex + 1) % announcementItems.length;
+            announcementContent.style.transform = `translateY(-${announcementIndex * announcementHeight}px)`;
+        }
+        
+        setInterval(scrollAnnouncement, 3000);
+        
+        // 密钥轮播功能
+        function randomKey() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let key = '';
+            for (let i = 0; i < 5; i++) {
+                key += Array.from({length:5},()=>chars[Math.floor(Math.random()*chars.length)]).join('') + '-';
+            }
+            key += Array.from({length:5},()=>chars[Math.floor(Math.random()*chars.length)]).join('');
+            return key;
+        }
+        const keyTypes = [
+            'Windows 11 专业版', 'Windows 11 家庭版', 'Windows 11 专业工作站版', 'Windows 11 教育版', 'Windows 11 专业教育版', 'Windows 11 企业版LTS',
+            'Windows 10 专业版', 'Windows 10 家庭版', 'Windows 10 专业工作站版', 'Windows 10 教育版', 'Windows 10 专业教育版', 'Windows 10 企业版LTS',
+            'Office 2021 专业增强版', 'Office 2019 专业增强版', 'Office 2016 专业增强版', 'Office 2013 专业增强版'
+        ];
+        const keyData = [];
+        for(let i=0;i<30;i++) {
+            const type = keyTypes[i%keyTypes.length];
+            keyData.push({
+                title: type,
+                code: randomKey()
+            });
+        }
+
+        // 密钥轮播功能（自动上下滚动，不停滞，无按钮）
+        const keyItemsContainer = document.getElementById('keyItems');
+        let keyIndex = 0;
+        const visibleCount = 2; // 每次显示2组
+        const keyItemHeight = 100; // 估算每项高度，实际可用 getBoundingClientRect
+        let isAnimating = false;
+
+        function renderKeys() {
+            // 渲染所有项，方便动画
+            keyItemsContainer.innerHTML = '';
+            for(let i=0;i<keyData.length;i++) {
+                const item = keyData[i];
+                const codeParts = item.code.split('-');
+                const showCode = codeParts.slice(0,3).join('-') + '-****-****';
+                const keyElement = document.createElement('div');
+                keyElement.className = 'key-item';
+                keyElement.innerHTML = `
+                    <div class="key-title">${item.title}</div>
+                    <div class="key-code">
+                        <span class="key-visible">${showCode}</span>
+                        <button class="buy-key">密钥选购</button>
+                    </div>
+                `;
+                keyItemsContainer.appendChild(keyElement);
+            }
+            // 设置初始位置
+            keyItemsContainer.style.transition = 'none';
+            keyItemsContainer.style.transform = `translateY(-${keyIndex * keyItemHeight}px)`;
+        }
+        renderKeys();
+
+        function smoothScrollKeys() {
+            if (isAnimating) return;
+            isAnimating = true;
+            keyItemsContainer.style.transition = 'transform 0.6s cubic-bezier(.4,0,.2,1)';
+            keyItemsContainer.style.transform = `translateY(-${(keyIndex + 1) * keyItemHeight}px)`;
+            setTimeout(() => {
+                keyIndex = (keyIndex + 1) % keyData.length;
+                // 如果到达末尾，瞬间回到头部
+                if (keyIndex + visibleCount > keyData.length) {
+                    keyItemsContainer.style.transition = 'none';
+                    keyItemsContainer.style.transform = `translateY(0)`;
+                    keyIndex = 0;
+                }
+                isAnimating = false;
+            }, 600);
+        }
+
+        setInterval(smoothScrollKeys, 4000);
+
+        // 版本对比折叠功能
+        const collapsibleHeader = document.querySelector('.collapsible-header');
+        const collapsibleContent = document.querySelector('.collapsible-content');
+        const toggleIcon = document.querySelector('.toggle-icon');
+        
+        collapsibleHeader.addEventListener('click', () => {
+            if (collapsibleContent.style.maxHeight) {
+                collapsibleContent.style.maxHeight = null;
+                toggleIcon.textContent = '▼';
+            } else {
+                collapsibleContent.style.maxHeight = collapsibleContent.scrollHeight + 'px';
+                toggleIcon.textContent = '▲';
+            }
+        });
+        
+        // 设备信息检测功能
+        const deviceInfoGrid = document.getElementById('deviceInfoGrid');
+        const refreshInfoBtn = document.getElementById('refreshInfo');
+        
+        function getBrowserType() {
+            const ua = navigator.userAgent.toLowerCase();
+            if (ua.includes('edg')) return 'Edge';
+            if (ua.includes('chrome')) return 'Chrome';
+            if (ua.includes('firefox')) return 'Firefox';
+            if (ua.includes('safari') && !ua.includes('chrome')) return 'Safari';
+            if (ua.includes('opera') || ua.includes('opr')) return 'Opera';
+            if (ua.includes('msie') || ua.includes('trident')) return 'IE';
+            return '未知';
+        }
+
+        function getDeviceInfo() {
+            deviceInfoGrid.innerHTML = '';
+            const info = [
+                { label: '浏览器', value: getBrowserType() },
+                { label: '操作系统', value: navigator.platform },
+                { label: '屏幕分辨率', value: `${screen.width} × ${screen.height}` },
+                { label: '颜色深度', value: `${screen.colorDepth} 位` },
+                { label: '语言', value: navigator.language },
+            ];
+            info.forEach(item => {
+                const infoItem = document.createElement('div');
+                infoItem.className = 'info-item';
+                infoItem.innerHTML = `
+                    <div class="info-label">${item.label}</div>
+                    <div class="info-value">${item.value}</div>
+                `;
+                deviceInfoGrid.appendChild(infoItem);
+            });
+        }
+        
+        getDeviceInfo();
+        refreshInfoBtn.addEventListener('click', getDeviceInfo);
+        
+        // 右下角功能按钮
+        const toTopBtn = document.getElementById('toTop');
+        const toBottomBtn = document.getElementById('toBottom');
+        const wechatBtn = document.getElementById('wechatBtn');
+        const wechatQrCode = document.getElementById('wechatQrCode');
+        
+        toTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        toBottomBtn.addEventListener('click', () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+        
+        // 微信二维码显示/隐藏控制
+        let isQrCodeVisible = false;
+        wechatBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            isQrCodeVisible = !isQrCodeVisible;
+            wechatQrCode.style.display = isQrCodeVisible ? 'block' : 'none';
+        });
+        document.addEventListener('click', () => {
+            if (isQrCodeVisible) {
+                isQrCodeVisible = false;
+                wechatQrCode.style.display = 'none';
+            }
+        });
+        wechatBtn.addEventListener('mouseenter', () => {
+            isQrCodeVisible = true;
+            wechatQrCode.style.display = 'block';
+        });
+        wechatBtn.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                const isHoveringQr = wechatQrCode.matches(':hover');
+                if (!isHoveringQr) {
+                    isQrCodeVisible = false;
+                    wechatQrCode.style.display = 'none';
+                }
+            }, 100);
+        });
+        wechatQrCode.addEventListener('mouseleave', () => {
+            isQrCodeVisible = false;
+            wechatQrCode.style.display = 'none';
+        });
+
+        // FAQ弹窗逻辑
+        const faqBtn = document.getElementById('faqBtn');
+        const faqModal = document.getElementById('faqModal');
+        const faqClose = document.getElementById('faqClose');
+        faqBtn.addEventListener('click', function() {
+            faqModal.style.display = 'block';
+        });
+        faqClose.addEventListener('click', function() {
+            faqModal.style.display = 'none';
+        });
+        faqModal.addEventListener('click', function(e){
+            if(e.target === faqModal) faqModal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
