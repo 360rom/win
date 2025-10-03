@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,25 +17,25 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         /* 全局链接样式 - 移除下划线 */
         a {
             text-decoration: none;
         }
-        
+
         body {
             background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* 顶部横幅 */
         .header-banner {
             background-color: #0078d7;
@@ -42,27 +43,27 @@
             padding: 15px 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .banner-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .banner-title {
             display: flex;
             align-items: center;
             font-size: 1.2rem;
             font-weight: 600;
         }
-        
+
         .windows-icon {
             margin-right: 10px;
             font-size: 2rem;
             color: #fff;
             vertical-align: middle;
         }
-        
+
         .login-btn {
             background-color: white;
             color: #0078d7;
@@ -75,15 +76,15 @@
             display: flex;
             align-items: center;
         }
-        
+
         .login-btn:hover {
             background-color: #f0f0f0;
         }
-        
+
         .login-icon {
             margin-right: 5px;
         }
-        
+
         /* 公告中心 */
         .announcement-section {
             background-color: white;
@@ -93,7 +94,7 @@
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             overflow: hidden;
         }
-        
+
         .announcement-section h2 {
             color: #2c3e50;
             margin-bottom: 15px;
@@ -101,12 +102,12 @@
             display: flex;
             align-items: center;
         }
-        
+
         .announcement-section h2::before {
             content: "📢";
             margin-right: 8px;
         }
-        
+
         .announcement-scroll {
             height: 60px;
             position: relative;
@@ -114,25 +115,25 @@
             border: 1px solid #f1f5f9;
             border-radius: 4px;
         }
-        
+
         .announcement-content {
             position: absolute;
             width: 100%;
             transition: transform 0.5s ease-in-out;
         }
-        
+
         .announcement-item {
             padding: 10px 15px;
             font-size: 1rem;
             color: #333;
             font-weight: 600;
         }
-        
+
         /* 产品展示区 */
         .products-section {
             margin: 30px 0;
         }
-        
+
         .products-section h2 {
             color: #2c3e50;
             margin-bottom: 20px;
@@ -140,18 +141,18 @@
             display: flex;
             align-items: center;
         }
-        
+
         .products-section h2::before {
             content: "📦";
             margin-right: 8px;
         }
-        
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
-        
+
         .product-category {
             background-color: white;
             border-radius: 8px;
@@ -160,12 +161,12 @@
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .product-category:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
         }
-        
+
         .category-icon {
             width: 100px;
             height: 100px;
@@ -177,24 +178,24 @@
             font-size: 3rem;
             color: #0078d7;
         }
-        
+
         .category-name {
             font-size: 1.2rem;
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 15px;
         }
-        
+
         .versions-list {
             list-style: none;
             color: #64748b;
         }
-        
+
         .versions-list li {
             margin: 8px 0;
             font-size: 0.95rem;
         }
-        
+
         /* 密钥选购区 */
         .keys-section {
             background-color: white;
@@ -203,7 +204,7 @@
             margin: 30px 0;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
-        
+
         .keys-section h2 {
             color: #2c3e50;
             margin-bottom: 20px;
@@ -211,12 +212,12 @@
             display: flex;
             align-items: center;
         }
-        
+
         .keys-section h2::before {
             content: "🔑";
             margin-right: 8px;
         }
-        
+
         .key-carousel {
             height: 200px;
             position: relative;
@@ -224,29 +225,29 @@
             border: 1px solid #f1f5f9;
             border-radius: 4px;
         }
-        
+
         .key-items {
             position: absolute;
             width: 100%;
             transition: transform 0.5s ease-in-out;
         }
-        
+
         .key-item {
             padding: 15px;
             border-bottom: 1px solid #f1f5f9;
         }
-        
+
         .key-item:last-child {
             border-bottom: none;
         }
-        
+
         .key-title {
             font-size: 1rem;
             font-weight: 500;
             margin-bottom: 8px;
             color: #2c3e50;
         }
-        
+
         .key-code {
             font-family: 'Courier New', monospace;
             font-size: 1rem;
@@ -258,16 +259,16 @@
             justify-content: space-between;
             border: 1px solid #e2e8f0;
         }
-        
+
         .key-visible {
             color: #333;
         }
-        
+
         .key-hidden {
             color: #999;
             letter-spacing: 2px;
         }
-        
+
         .buy-key {
             background-color: #0078d7;
             color: white;
@@ -278,7 +279,7 @@
             font-weight: 500;
             transition: background-color 0.3s ease;
         }
-        
+
         .buy-key:hover {
             background-color: #005a9e;
         }
@@ -351,7 +352,7 @@
         .version-table tr:hover {
             background-color: #f8fafc;
         }
-        
+
         /* 设备检测区 */
         .device-info {
             background-color: white;
@@ -361,7 +362,7 @@
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
             position: relative;
         }
-        
+
         .device-info h2 {
             color: #2c3e50;
             margin-bottom: 20px;
@@ -369,12 +370,12 @@
             display: flex;
             align-items: center;
         }
-        
+
         .device-info h2::before {
             content: "💻";
             margin-right: 8px;
         }
-        
+
         .refresh-btn {
             position: absolute;
             top: 20px;
@@ -390,44 +391,44 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+
         .refresh-btn:hover {
             background-color: #0078d7;
             color: white;
         }
-        
+
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
         }
-        
+
         .info-item {
             background-color: #f8fafc;
             padding: 12px;
             border-radius: 4px;
             border: 1px solid #e2e8f0;
         }
-        
+
         .info-label {
             font-size: 0.85rem;
             color: #64748b;
             margin-bottom: 4px;
         }
-        
+
         .info-value {
             font-size: 0.95rem;
             font-weight: 500;
             color: #2c3e50;
         }
-        
+
         .info-error {
             color: #e74c3c;
             text-align: center;
             padding: 20px;
             font-size: 1rem;
         }
-        
+
         /* 功能按钮 */
         .action-buttons {
             position: fixed;
@@ -438,7 +439,7 @@
             gap: 10px;
             z-index: 100;
         }
-        
+
         .action-btn {
             width: 45px;
             height: 45px;
@@ -453,7 +454,7 @@
             box-shadow: 0 4px 12px rgba(0, 120, 215, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .action-btn:hover {
             background-color: #005a9e;
             transform: scale(1.05);
@@ -472,20 +473,20 @@
             display: none;
             text-align: center;
         }
-        
+
         .wechat-qrcode img {
             width: 150px;
             height: 150px;
             margin-bottom: 10px;
             border: 1px solid #f0f0f0;
         }
-        
+
         .wechat-qrcode p {
             color: #333;
             font-size: 0.9rem;
             margin: 0;
         }
-        
+
         /* 页脚 */
         footer {
             background-color: #2c3e50;
@@ -493,7 +494,7 @@
             padding: 30px 0 15px;
             margin-top: 40px;
         }
-        
+
         .footer-links {
             display: flex;
             flex-wrap: wrap;
@@ -501,17 +502,17 @@
             gap: 15px 30px;
             margin-bottom: 20px;
         }
-        
+
         .footer-link {
             color: #bdc3c7;
             transition: color 0.3s ease;
             font-size: 0.9rem;
         }
-        
+
         .footer-link:hover {
             color: white;
         }
-        
+
         .copyright {
             text-align: center;
             color: #95a5a6;
@@ -519,21 +520,21 @@
             padding-top: 15px;
             border-top: 1px solid #34495e;
         }
-        
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .banner-title {
                 font-size: 1rem;
             }
-            
+
             .products-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .info-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .key-code {
                 flex-direction: column;
                 gap: 8px;
@@ -542,23 +543,23 @@
             .version-table {
                 font-size: 0.9rem;
             }
-            
+
             .version-table th,
             .version-table td {
                 padding: 8px 10px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .key-item {
                 padding: 10px;
             }
-            
+
             .action-buttons {
                 bottom: 15px;
                 right: 15px;
             }
-            
+
             .action-btn {
                 width: 40px;
                 height: 40px;
@@ -569,12 +570,12 @@
                 right: 15px;
                 padding: 10px;
             }
-            
+
             .wechat-qrcode img {
                 width: 120px;
                 height: 120px;
             }
-            
+
             .footer-links {
                 flex-direction: column;
                 align-items: center;
@@ -583,6 +584,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- 顶部横幅 -->
     <header class="header-banner">
@@ -599,7 +601,7 @@
             </a>
         </div>
     </header>
-    
+
     <main class="container">
         <!-- 公告中心 -->
         <section class="announcement-section">
@@ -607,13 +609,15 @@
             <div class="announcement-scroll">
                 <div class="announcement-content" id="announcementContent">
                     <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知一：因密钥可复制，被恶意白嫖，现仅远程协助
-                    </span></div>
-                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知二：一机一码，版本任选，终生可用，免费升级</span></div>
-                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知三：【限时福利】 最新Office办公套件，含激活、部署，仅需加价获取</span></div>
+                        </span></div>
+                    <div class="announcement-item"><span
+                            style="color:#e74c3c;font-weight:bold;">通知二：一机一码，版本任选，终生可用，免费升级</span></div>
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知三：【限时福利】
+                            最新Office办公套件，含激活、部署，仅需加价获取</span></div>
                 </div>
             </div>
         </section>
-        
+
         <!-- 产品展示区 -->
         <section class="products-section">
             <h2>可激活/部署的产品</h2>
@@ -621,19 +625,21 @@
                 <!-- Windows 产品类别 -->
                 <div class="product-category">
                     <div class="category-icon">
-    <img src="pic/win.png" alt="Windows Logo" style="width: 100%; height: 100%; object-fit: contain;">
-</div>
+                        <img src="pic/win.png" alt="Windows Logo"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
                     <div class="category-name">Windows 操作系统</div>
                     <ul class="versions-list">
                         <li>任选·版本</li>
                     </ul>
                 </div>
-                
+
                 <!-- Office 产品类别 -->
                 <div class="product-category">
                     <div class="category-icon">
-    <img src="pic/office365.png" alt="Windows Logo" style="width: 100%; height: 100%; object-fit: contain;">
-</div>
+                        <img src="pic/office365.png" alt="Windows Logo"
+                            style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
                     <div class="category-name">Microsoft Office</div>
                     <ul class="versions-list">
                         <li>任选·版本</li>
@@ -641,7 +647,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- 密钥选购区 -->
         <section class="keys-section">
             <h2>密钥选购</h2>
@@ -729,7 +735,7 @@
                 </table>
             </div>
         </section>
-        
+
         <!-- 设备检测区 -->
         <section class="device-info">
             <h2>设备信息检测</h2>
@@ -739,7 +745,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- 功能按钮 -->
     <div class="action-buttons">
         <button class="action-btn" id="toTop" title="回到顶部">⇧</button>
@@ -751,78 +757,92 @@
             <p>扫码-客户经理</p>
         </div>
     </div>
-    
+
     <footer>
-    <div class="container">
-        <div class="footer-links">
-           <a href="javascript:void(0);" class="footer-link" id="noticeBtn">通知</a>
-            <a href="https://sunlogin.oray.com/download?categ=personal" class="footer-link" target="_blank">向日葵远程</a>
-            <a href="https://www.rdviewer.com/" class="footer-link" target="_blank">Rdview远程</a>
-            <a href="https://msdn.itellyou.cn/" class="footer-link" target="_blank">系统下载</a>
-            <a href="https://www.kdocs.cn/l/cghFNwCAiYQf" class="footer-link" target="_blank">帮助文档</a>
-            <a href="https://www.huorong.cn/" class="footer-link" target="_blank">火绒</a>
-            <a href="https://iknow.lenovo.com.cn/detail/200014" class="footer-link" target="_blank">Bitlocker</a>
-            <a href="https://otp.landian.vip/zh-cn/" class="footer-link" target="_blank">Office</a>
-            <a href="https://www.wepe.com.cn/" class="footer-link" target="_blank">PE</a>
-            <a href="javascript:void(0);" class="footer-link" id="faqBtn">FAQ</a>
+        <div class="container">
+            <div class="footer-links">
+                <a href="javascript:void(0);" class="footer-link" id="noticeBtn">通知</a>
+                <a href="https://sunlogin.oray.com/download?categ=personal" class="footer-link"
+                    target="_blank">向日葵远程</a>
+                <a href="https://www.rdviewer.com/" class="footer-link" target="_blank">Rdview远程</a>
+                <a href="https://msdn.itellyou.cn/" class="footer-link" target="_blank">系统下载</a>
+                <a href="https://www.kdocs.cn/l/cghFNwCAiYQf" class="footer-link" target="_blank">帮助文档</a>
+                <a href="https://www.huorong.cn/" class="footer-link" target="_blank">火绒</a>
+                <a href="https://iknow.lenovo.com.cn/detail/200014" class="footer-link" target="_blank">Bitlocker</a>
+                <a href="https://otp.landian.vip/zh-cn/" class="footer-link" target="_blank">Office</a>
+                <a href="https://www.wepe.com.cn/" class="footer-link" target="_blank">PE</a>
+                <a href="javascript:void(0);" class="footer-link" id="faqBtn">FAQ</a>
+            </div>
+            <div class="copyright">
+                © 2018-至今 版权所有
+            </div>
         </div>
-        <div class="copyright">
-            ©   2018-至今 版权所有
+    </footer>
+    <!-- 添加通知模态框 -->
+    <div id="noticeModal"
+        style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
+        <div
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:500px;padding:30px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;position:relative;">
+            <!-- 添加关闭按钮 -->
+            <button id="noticeClose"
+                style="position:absolute;top:15px;right:15px;background:none;border:none;font-size:1.5rem;color:#777;cursor:pointer;">×</button>
+            <div style="font-size:1.5rem;font-weight:bold;margin-bottom:20px;color:#e74c3c;">重要通知 | 2018运营-至今</div>
+            <div style="text-align:left;font-size:1rem;line-height:1.8;margin:20px 0;">
+                <p><strong>因密钥可复制、虚拟品；人群问题：带来损失</strong></p>
+                <p>1. 恶意白嫖，恶意退款的人</p>
+                <p>2. 小白人群；浪费后，且要退款</p>
+                <p style="color:#e74c3c;font-weight:bold;text-align:center;">为更好的解决，现仅：远程协助，成功率100%</p>
+                <p style="color:#e74c3c;font-weight:bold;">注：拒绝任何：恶意白嫖；必须先付后协（可退款）</p>
+                <br>
+                <p><strong>提示：</strong>如您"闲鱼"下单，因我方，支付宝不常用，请转微信</p>
+                <p><strong>承诺：</strong>100%正版、100%可用、100%放心、100%真实</p>
+                <p><strong>优惠：</strong>购入2个的，第2个，仅售半价</p>
+            </div>
+            <div style="position:relative;max-width:100%;width:200px;margin:10px auto;display:block;">
+                <img id="wx1Image" src="pic/wx1.png" alt="微信支付二维码"
+                    style="max-width:100%;width:100%;border-radius:6px;border:1px solid #eee;transition: transform 0.3s ease;">
+                <div style="position:absolute;top:-10px;right:-10px;display:flex;gap:5px;">
+                    <button id="zoomIn"
+                        style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">+</button>
+                    <button id="zoomOut"
+                        style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">-</button>
+                </div>
+                <div style="text-align: center; margin-top: 10px; font-size: 1rem; color: #333;">
+                    感谢理解，提供3年质保
+                </div>
+            </div>
         </div>
     </div>
-</footer>
-<!-- 添加通知模态框 -->
-<div id="noticeModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:500px;padding:30px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
-        <div style="font-size:1.5rem;font-weight:bold;margin-bottom:20px;color:#e74c3c;">重要通知 | 2018运营-至今</div>
-        <div style="text-align:left;font-size:1rem;line-height:1.8;margin:20px 0;">
-            <p><strong>因密钥可复制、虚拟品；人群问题：带来损失</strong></p>
-            <p>1. 恶意白嫖，恶意退款的人</p>
-            <p>2. 小白人群；浪费后，且要退款</p>
-            
-            <p style="color:#e74c3c;font-weight:bold;text-align:center;">为更好的解决，现仅：远程协助，成功率100%</p>
-            <p style="color:#e74c3c;font-weight:bold;">注：拒绝任何：恶意白嫖；必须先付后协（可退款）</p>
-            <br>
-            <p><strong>提示：</strong>如您"闲鱼"下单，因我方，支付宝不常用，请转微信</p>
-            <p><strong>承诺：</strong>100%正版、100%可用、100%放心、100%真实</p>
+    <!-- FAQ模态框 -->
+    <div id="faqModal"
+        style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
+        <div
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:400px;padding:30px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
+            <div style="font-size:1.2rem;font-weight:bold;margin-bottom:18px;">常见问题 FAQ</div>
+            <div style="text-align:left;font-size:1rem;line-height:1.8;">
+                <div>
+                    <b>问：</b>是否，正版永久？<br><b>答：</b>是；账户绑定
+                    <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+                </div>
+                <div>
+                    <b>问：</b>换或多台电脑，能用<br><b>答：</b>是
+                    <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+                </div>
+                <div>
+                    <b>问：</b>是否，有售后<br><b>答：</b>质保一年
+                    <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+                </div>
+                <div>
+                    <b>问：</b>如何查看，正版激活？<br><b>答：</b>设置→系统→激活→激活状态
+                    <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
+                </div>
+                <img src="pic/win-sq.png" alt="激活状态"
+                    style="max-width:100%;width:220px;margin:10px auto;display:block;border-radius:6px;">
+            </div>
+            <button id="faqClose"
+                style="margin-top:18px;padding:6px 24px;border:none;background:#0078d7;color:#fff;border-radius:4px;font-size:1rem;cursor:pointer;">关闭</button>
         </div>
-        <div style="position:relative;max-width:100%;width:200px;margin:10px auto;display:block;">
-    <img id="wx1Image" src="pic/wx1.png" alt="微信支付二维码" style="max-width:100%;width:100%;border-radius:6px;border:1px solid #eee;transition: transform 0.3s ease;">
-    <div style="position:absolute;top:-10px;right:-10px;display:flex;gap:5px;">
-        <button id="zoomIn" style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">+</button>
-        <button id="zoomOut" style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">-</button>
     </div>
-     <div style="text-align: center; margin-top: 10px; font-size: 1rem; color: #333;">
-            感谢理解，提供3年质保
-        </div>
-    </div>
-</div>
-<!-- FAQ模态框 -->
-<div id="faqModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:400px;padding:30px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
-        <div style="font-size:1.2rem;font-weight:bold;margin-bottom:18px;">常见问题 FAQ</div>
-        <div style="text-align:left;font-size:1rem;line-height:1.8;">
-            <div>
-                <b>问：</b>是否，正版永久？<br><b>答：</b>是；账户绑定
-                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
-            </div>
-            <div>
-                <b>问：</b>换或多台电脑，能用<br><b>答：</b>是
-                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
-            </div>
-            <div>
-                <b>问：</b>是否，有售后<br><b>答：</b>质保一年
-                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
-            </div>
-            <div>
-                <b>问：</b>如何查看，正版激活？<br><b>答：</b>设置→系统→激活→激活状态
-                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
-            </div>
-            <img src="pic/win-sq.png" alt="激活状态" style="max-width:100%;width:220px;margin:10px auto;display:block;border-radius:6px;">
-        </div>
-        <button id="faqClose" style="margin-top:18px;padding:6px 24px;border:none;background:#0078d7;color:#fff;border-radius:4px;font-size:1rem;cursor:pointer;">关闭</button>
-    </div>
-</div>
     </footer>
 
     <script>
@@ -832,22 +852,22 @@
         const announcementItems = announcementContent.querySelectorAll('.announcement-item');
         // 自动获取高度，避免硬编码
         const announcementHeight = announcementItems[0]?.offsetHeight || 60;
-        
+
         function scrollAnnouncement() {
             announcementIndex = (announcementIndex + 1) % announcementItems.length;
             announcementContent.style.transform = `translateY(-${announcementIndex * announcementHeight}px)`;
         }
-        
+
         setInterval(scrollAnnouncement, 3000);
-        
+
         // 密钥轮播功能
         function randomKey() {
             const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
             let key = '';
             for (let i = 0; i < 5; i++) {
-                key += Array.from({length:5},()=>chars[Math.floor(Math.random()*chars.length)]).join('') + '-';
+                key += Array.from({ length: 5 }, () => chars[Math.floor(Math.random() * chars.length)]).join('') + '-';
             }
-            key += Array.from({length:5},()=>chars[Math.floor(Math.random()*chars.length)]).join('');
+            key += Array.from({ length: 5 }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
             return key;
         }
         const keyTypes = [
@@ -856,8 +876,8 @@
             'Office 2021 专业增强版', 'Office 2019 专业增强版', 'Office 2016 专业增强版', 'Office 2013 专业增强版'
         ];
         const keyData = [];
-        for(let i=0;i<30;i++) {
-            const type = keyTypes[i%keyTypes.length];
+        for (let i = 0; i < 30; i++) {
+            const type = keyTypes[i % keyTypes.length];
             keyData.push({
                 title: type,
                 code: randomKey()
@@ -874,10 +894,10 @@
         function renderKeys() {
             // 渲染所有项，方便动画
             keyItemsContainer.innerHTML = '';
-            for(let i=0;i<keyData.length;i++) {
+            for (let i = 0; i < keyData.length; i++) {
                 const item = keyData[i];
                 const codeParts = item.code.split('-');
-                const showCode = codeParts.slice(0,3).join('-') + '-****-****';
+                const showCode = codeParts.slice(0, 3).join('-') + '-****-****';
                 const keyElement = document.createElement('div');
                 keyElement.className = 'key-item';
                 keyElement.innerHTML = `
@@ -918,7 +938,7 @@
         const collapsibleHeader = document.querySelector('.collapsible-header');
         const collapsibleContent = document.querySelector('.collapsible-content');
         const toggleIcon = document.querySelector('.toggle-icon');
-        
+
         collapsibleHeader.addEventListener('click', () => {
             if (collapsibleContent.style.maxHeight) {
                 collapsibleContent.style.maxHeight = null;
@@ -928,11 +948,11 @@
                 toggleIcon.textContent = '▲';
             }
         });
-        
+
         // 设备信息检测功能
         const deviceInfoGrid = document.getElementById('deviceInfoGrid');
         const refreshInfoBtn = document.getElementById('refreshInfo');
-        
+
         function getBrowserType() {
             const ua = navigator.userAgent.toLowerCase();
             if (ua.includes('edg')) return 'Edge';
@@ -963,23 +983,23 @@
                 deviceInfoGrid.appendChild(infoItem);
             });
         }
-        
+
         getDeviceInfo();
         refreshInfoBtn.addEventListener('click', getDeviceInfo);
-        
+
         // 右下角功能按钮
         const toTopBtn = document.getElementById('toTop');
         const toBottomBtn = document.getElementById('toBottom');
         const wechatBtn = document.getElementById('wechatBtn');
         const wechatQrCode = document.getElementById('wechatQrCode');
-        
+
         toTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         toBottomBtn.addEventListener('click', () => {
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
         });
-        
+
         // 微信二维码显示/隐藏控制
         let isQrCodeVisible = false;
         wechatBtn.addEventListener('click', (e) => {
@@ -1015,60 +1035,69 @@
         const faqBtn = document.getElementById('faqBtn');
         const faqModal = document.getElementById('faqModal');
         const faqClose = document.getElementById('faqClose');
-        faqBtn.addEventListener('click', function() {
+        faqBtn.addEventListener('click', function () {
             faqModal.style.display = 'block';
         });
-        faqClose.addEventListener('click', function() {
+        faqClose.addEventListener('click', function () {
             faqModal.style.display = 'none';
         });
-        faqModal.addEventListener('click', function(e){
-            if(e.target === faqModal) faqModal.style.display = 'none';
+        faqModal.addEventListener('click', function (e) {
+            if (e.target === faqModal) faqModal.style.display = 'none';
         });
-// 通知模态框逻辑
-const noticeBtn = document.getElementById('noticeBtn');
-const noticeModal = document.getElementById('noticeModal');
-const noticeClose = document.getElementById('noticeClose');
+        // 修改通知模态框逻辑
+        const noticeBtn = document.getElementById('noticeBtn');
+        const noticeModal = document.getElementById('noticeModal');
+        const noticeClose = document.getElementById('noticeClose');
 
-noticeBtn.addEventListener('click', function() {
-    noticeModal.style.display = 'block';
-});
+        noticeBtn.addEventListener('click', function () {
+            noticeModal.style.display = 'block';
+        });
 
-noticeClose.addEventListener('click', function() {
-    noticeModal.style.display = 'none';
-});
+        noticeClose.addEventListener('click', function () {
+            noticeModal.style.display = 'none';
+        });
 
-noticeModal.addEventListener('click', function(e){
-    if(e.target === noticeModal) {
-        noticeModal.style.display = 'none';
-    }
-});
+        noticeModal.addEventListener('click', function (e) {
+            // 点击模态框背景关闭（不是点击内容区域）
+            if (e.target === noticeModal) {
+                noticeModal.style.display = 'none';
+            }
+        });
+
+        // 添加ESC键关闭功能
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && noticeModal.style.display === 'block') {
+                noticeModal.style.display = 'none';
+            }
+        });
     </script>
 
-<script>
-// 图片缩放功能
-const wx1Image = document.getElementById('wx1Image');
-const zoomInBtn = document.getElementById('zoomIn');
-const zoomOutBtn = document.getElementById('zoomOut');
-let currentScale = 1;
-const scaleStep = 0.2;
-const maxScale = 2;
-const minScale = 0.8;
+    <script>
+        // 图片缩放功能
+        const wx1Image = document.getElementById('wx1Image');
+        const zoomInBtn = document.getElementById('zoomIn');
+        const zoomOutBtn = document.getElementById('zoomOut');
+        let currentScale = 1;
+        const scaleStep = 0.2;
+        const maxScale = 2;
+        const minScale = 0.8;
 
-zoomInBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // 防止点击按钮时关闭模态框
-    if (currentScale < maxScale) {
-        currentScale += scaleStep;
-        wx1Image.style.transform = `scale(${currentScale})`;
-    }
-});
+        zoomInBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止点击按钮时关闭模态框
+            if (currentScale < maxScale) {
+                currentScale += scaleStep;
+                wx1Image.style.transform = `scale(${currentScale})`;
+            }
+        });
 
-zoomOutBtn.addEventListener('click', (e) => {
-    e.stopPropagation(); // 防止点击按钮时关闭模态框
-    if (currentScale > minScale) {
-        currentScale -= scaleStep;
-        wx1Image.style.transform = `scale(${currentScale})`;
-    }
-});
-</script>
+        zoomOutBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // 防止点击按钮时关闭模态框
+            if (currentScale > minScale) {
+                currentScale -= scaleStep;
+                wx1Image.style.transform = `scale(${currentScale})`;
+            }
+        });
+    </script>
 </body>
+
 </html>
