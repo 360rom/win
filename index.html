@@ -606,9 +606,9 @@
             <h2>公告中心</h2>
             <div class="announcement-scroll">
                 <div class="announcement-content" id="announcementContent">
-                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知一：因密钥可复制，现仅远程协助
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知一：因密钥可复制，被恶意白嫖，现仅远程协助
                     </span></div>
-                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知二：一次性，买断版，一机一码，版本任选，终生可用，免费升级</span></div>
+                    <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知二：一机一码，版本任选，终生可用，免费升级</span></div>
                     <div class="announcement-item"><span style="color:#e74c3c;font-weight:bold;">通知三：【限时福利】 最新Office办公套件，含激活、部署，仅需加价获取</span></div>
                 </div>
             </div>
@@ -647,7 +647,6 @@
             <h2>密钥选购</h2>
             <div class="key-carousel">
                 <div class="key-items" id="keyItems" style="will-change:transform;">
-                    <!-- 密钥内容将通过JS动态生成 -->
                 </div>
             </div>
         </section>
@@ -682,7 +681,7 @@
                             <td>零售</td>
                         </tr>
                         <tr>
-                            <td>专业版</td>
+                            <td>专业版(推荐)</td>
                             <td>中小企业/专业用户</td>
                             <td>✅（基础）</td>
                             <td>组策略</td>
@@ -756,13 +755,14 @@
     <footer>
     <div class="container">
         <div class="footer-links">
+           <a href="javascript:void(0);" class="footer-link" id="noticeBtn">通知</a>
             <a href="https://sunlogin.oray.com/download?categ=personal" class="footer-link" target="_blank">向日葵远程</a>
             <a href="https://www.rdviewer.com/" class="footer-link" target="_blank">Rdview远程</a>
             <a href="https://msdn.itellyou.cn/" class="footer-link" target="_blank">系统下载</a>
             <a href="https://www.kdocs.cn/l/cghFNwCAiYQf" class="footer-link" target="_blank">帮助文档</a>
             <a href="https://www.huorong.cn/" class="footer-link" target="_blank">火绒</a>
             <a href="https://iknow.lenovo.com.cn/detail/200014" class="footer-link" target="_blank">Bitlocker</a>
-            <a href="https://otp.landian.vip/zh-cn/" class="footer-link" target="_blank">Office工具</a>
+            <a href="https://otp.landian.vip/zh-cn/" class="footer-link" target="_blank">Office</a>
             <a href="https://www.wepe.com.cn/" class="footer-link" target="_blank">PE</a>
             <a href="javascript:void(0);" class="footer-link" id="faqBtn">FAQ</a>
         </div>
@@ -771,6 +771,32 @@
         </div>
     </div>
 </footer>
+<!-- 添加通知模态框 -->
+<div id="noticeModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:500px;padding:30px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
+        <div style="font-size:1.5rem;font-weight:bold;margin-bottom:20px;color:#e74c3c;">重要通知 | 2018运营-至今</div>
+        <div style="text-align:left;font-size:1rem;line-height:1.8;margin:20px 0;">
+            <p><strong>因密钥可复制、虚拟品；人群问题：带来损失</strong></p>
+            <p>1. 恶意白嫖，恶意退款的人</p>
+            <p>2. 小白人群；浪费后，且要退款</p>
+            
+            <p style="color:#e74c3c;font-weight:bold;text-align:center;">为更好的解决，现仅：远程协助，成功率100%</p>
+            <p style="color:#e74c3c;font-weight:bold;">注：拒绝任何：恶意白嫖；必须先付后协（可退款）</p>
+            <br>
+            <p><strong>提示：</strong>如您"闲鱼"下单，因我方，支付宝不常用，请转微信</p>
+            <p><strong>承诺：</strong>100%正版、100%可用、100%放心、100%真实</p>
+        </div>
+        <div style="position:relative;max-width:100%;width:200px;margin:10px auto;display:block;">
+    <img id="wx1Image" src="pic/wx1.png" alt="微信支付二维码" style="max-width:100%;width:100%;border-radius:6px;border:1px solid #eee;transition: transform 0.3s ease;">
+    <div style="position:absolute;top:-10px;right:-10px;display:flex;gap:5px;">
+        <button id="zoomIn" style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">+</button>
+        <button id="zoomOut" style="width:24px;height:24px;border-radius:50%;background:#fff;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;box-shadow:0 1px 3px rgba(0,0,0,0.1);">-</button>
+    </div>
+     <div style="text-align: center; margin-top: 10px; font-size: 1rem; color: #333;">
+            感谢理解，提供3年质保
+        </div>
+    </div>
+</div>
 <!-- FAQ模态框 -->
 <div id="faqModal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.4);z-index:999;">
     <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:10px;max-width:90vw;width:400px;padding:30px 20px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;">
@@ -781,11 +807,7 @@
                 <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
             </div>
             <div>
-                <b>问：</b>换电脑，是否能用<br><b>答：</b>是
-                <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
-            </div>
-            <div>
-                <b>问：</b>多台电脑，可用？<br><b>答：</b>可
+                <b>问：</b>换或多台电脑，能用<br><b>答：</b>是
                 <hr style="border:none;border-bottom:1px solid #e0e0e0;margin:8px 0;">
             </div>
             <div>
@@ -1002,6 +1024,51 @@
         faqModal.addEventListener('click', function(e){
             if(e.target === faqModal) faqModal.style.display = 'none';
         });
+// 通知模态框逻辑
+const noticeBtn = document.getElementById('noticeBtn');
+const noticeModal = document.getElementById('noticeModal');
+const noticeClose = document.getElementById('noticeClose');
+
+noticeBtn.addEventListener('click', function() {
+    noticeModal.style.display = 'block';
+});
+
+noticeClose.addEventListener('click', function() {
+    noticeModal.style.display = 'none';
+});
+
+noticeModal.addEventListener('click', function(e){
+    if(e.target === noticeModal) {
+        noticeModal.style.display = 'none';
+    }
+});
     </script>
+
+<script>
+// 图片缩放功能
+const wx1Image = document.getElementById('wx1Image');
+const zoomInBtn = document.getElementById('zoomIn');
+const zoomOutBtn = document.getElementById('zoomOut');
+let currentScale = 1;
+const scaleStep = 0.2;
+const maxScale = 2;
+const minScale = 0.8;
+
+zoomInBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 防止点击按钮时关闭模态框
+    if (currentScale < maxScale) {
+        currentScale += scaleStep;
+        wx1Image.style.transform = `scale(${currentScale})`;
+    }
+});
+
+zoomOutBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 防止点击按钮时关闭模态框
+    if (currentScale > minScale) {
+        currentScale -= scaleStep;
+        wx1Image.style.transform = `scale(${currentScale})`;
+    }
+});
+</script>
 </body>
 </html>
