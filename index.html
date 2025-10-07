@@ -602,7 +602,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="mainContent">
         <!-- 公告中心 -->
         <section class="announcement-section">
             <h2>公告中心</h2>
@@ -758,7 +758,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer id="footerContent">
         <div class="container">
             <div class="footer-links">
                 <a href="javascript:void(0);" class="footer-link" id="noticeBtn">通知</a>
@@ -847,6 +847,9 @@
     </footer>
 
     <script>
+        // 模态框通知开关
+        const noticeModalDefaultOpen = true; // true=默认打开，false=默认不打开
+
         // 公告滚动功能
         let announcementIndex = 0;
         const announcementContent = document.getElementById('announcementContent');
@@ -1050,25 +1053,38 @@
         const noticeModal = document.getElementById('noticeModal');
         const noticeClose = document.getElementById('noticeClose');
 
+        // 页面加载时根据变量决定是否显示通知模态框
+        if (noticeModalDefaultOpen) {
+            noticeModal.style.display = 'block';
+            // mainContent.style.display = 'none';
+            // footerContent.style.display = 'none';
+        }
+
         noticeBtn.addEventListener('click', function () {
             noticeModal.style.display = 'block';
+            // mainContent.style.display = 'none';
+            // footerContent.style.display = 'none';
         });
 
-        noticeClose.addEventListener('click', function () {
+        function closeNoticeModal() {
             noticeModal.style.display = 'none';
-        });
+            // mainContent.style.display = '';
+            // footerContent.style.display = '';
+        }
+
+        noticeClose.addEventListener('click', closeNoticeModal);
 
         noticeModal.addEventListener('click', function (e) {
             // 点击模态框背景关闭（不是点击内容区域）
             if (e.target === noticeModal) {
-                noticeModal.style.display = 'none';
+                closeNoticeModal();
             }
         });
 
         // 添加ESC键关闭功能
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape' && noticeModal.style.display === 'block') {
-                noticeModal.style.display = 'none';
+                closeNoticeModal();
             }
         });
     </script>
